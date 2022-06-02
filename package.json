@@ -1,0 +1,30 @@
+{
+  "name": "typescripttemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "watch:tsc": "tsc --watch",
+    "watch:app": "live-server",
+    "bundle": "browserify dist/index.js dist/models.js -o dist/app.js",
+    "watch:bundle": "watchify dist/index.js dist/modules.js -o dist/app.js",
+    "watch:all": "concurrently npm:watch:tsc npm:watch:app npm:watch:bundle"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "live-server": "^1.2.2",
+    "typescript": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "browserify": "^17.0.0",
+    "eslint": "^8.16.0",
+    "watchify": "^4.0.0"
+  }
+}
